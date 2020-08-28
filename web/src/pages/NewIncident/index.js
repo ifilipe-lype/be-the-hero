@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 
@@ -23,7 +23,7 @@ export default function NewIncident(){
             value
         }
         try {
-            const response = await api.post("incidents", data, {
+            await api.post("incidents", data, {
                 headers: {
                     Authorization: ongID
                 }
