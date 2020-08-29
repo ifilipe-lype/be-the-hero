@@ -54,7 +54,7 @@ export default function Detail(){
             <FlatList style={styles.incidentList}
                 data={incidents}
                 keyExtractor={(incident) => String(incident.id)}
-                showsVerticalScrollIndicator={true}
+                showsVerticalScrollIndicator={false}
                 onEndReached={loadIncidents} // when scroll reaches the end, loading more items
                 onEndReachedThreshold={0.2} // set scrool end to 20%, for loading new items
                 renderItem={({ item: incident }) => {
