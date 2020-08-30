@@ -1,4 +1,5 @@
 const express = require("express");
+const { errors } = require("celebrate");
 const cors = require("cors");
 
 const routes = require("./routes");
@@ -13,5 +14,8 @@ app.use(cors());
 
 // setting up routes
 app.use(routes);
+
+// setup erros handler for celebrate
+app.use(errors());
 
 app.listen(3333);
