@@ -1,4 +1,4 @@
-const crypto = require("crypto");
+const generateUniqueId = require("../utils/generateUniqueId");
 const db = require("../database");
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
         const { name, email, whatsapp, city, uf } = req.body;
     
         // generate a random hex string. will it be unique in long-term ?
-        const id = crypto.randomBytes(4).toString("hex");
+        const id = generateUniqueId();
     
         // one ong to the database, on table ongs.
         await db("ongs").insert({

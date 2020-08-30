@@ -18,4 +18,4 @@ app.use(routes);
 // setup erros handler for celebrate
 app.use(errors());
 
-app.listen(3333);
+module.exports = app;
